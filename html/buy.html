@@ -3,24 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Property Listing</title>
+    <link rel="stylesheet" href="../styles/buy.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <p id="price"></p>
-    <p id="beds"></p>
-    <p id="baths"></p>
-    <p id="sqft"></p>
-    <p id="description"></p>
-    <p id="developer"></p>
-    <p id="parking"></p>
-    <p id="outdoor"></p>
-    <p id="ac"></p>
-    <p id="hoa"></p>
-    <p id="listing-date"></p>
-    <p id="price-per-sqft"></p>
-    <p id="basement"></p>
-    <p id="rooms"></p>
-    <p id="types-of-rooms"></p>
-    <p id="full-half-beds-and-baths"></p>
+    <div id="image-gallery">
+      <div id="gallery-thumbnails">
+        <img src="../images/ph/placeholderH5.jpg" alt="Property Thumbnail" />
+      </div>
+      <h3>Property Images</h3>
+      <button id="view-all-images">View all images</button>
+    </div>
+
+    <div class="property-container">
+      <div id="property-info">
+        <h2 id="slogan">Buy a house now</h2>
+        <div id="address-info">
+          <img
+            class="icon"
+            src="../images/icons/pin_drop_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
+            alt="Location Icon"
+          />
+          <h2 id="property-address">[Address]</h2>
+        </div>
+        <p id="property-description">[Description]</p>
+      </div>
+
+      <div id="brief-info">
+        <p>Brief information</p>
+        <p id="developer-name">Owner: [Owner Name]</p>
+        <p id="property-price">Price: $[Price]</p>
+
+        <p id="property-beds-baths-sqft">
+          <img
+            class="icon"
+            src="../images/icons/bed_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+          />
+          [Beds] •
+          <img
+            class="icon"
+            src="../images/icons/bathtub_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+          />[Baths] •
+          <img
+            class="icon"
+            src="../images/icons/timeline_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+          />[SqFt]
+        </p>
+
+        <button id="more-info" type="button">More information</button>
+      </div>
+    </div>
+
+    <h3>Similar Homes</h3>
+    <div id="similar-homes-list"></div>
+
+    <h3>Affordability Calculator</h3>
+    <label for="home-price">Home Price:</label>
+    <input type="number" id="home-price" value="[Home Price]" />
+
+    <label for="down-payment">Down Payment (%):</label>
+    <input type="number" id="down-payment" placeholder="20" />
+
+    <label for="interest-rate">Interest Rate (%):</label>
+    <input type="number" id="interest-rate" placeholder="3.5" />
+
+    <p id="estimated-payment">
+      Your estimated payment is $[Estimated Payment] per month.
+    </p>
+
+    <div id="info-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Home Highlights</h3>
+        <ul>
+          <li id="highlight-parking">Parking: [Parking]</li>
+          <li id="highlight-outdoor">Outdoor: [Outdoor]</li>
+          <li id="highlight-ac">A/C: [A/C]</li>
+          <li id="highlight-hoa">HOA: $[HOA]</li>
+          <li id="highlight-listing-date">Listing Date: [Listing Date]</li>
+          <li id="highlight-price-per-sqft">Price per Sq Ft: $[Price/SqFt]</li>
+        </ul>
+
+        <h3>Home Details</h3>
+        <p id="basement">Basement: [Basement]</p>
+        <p id="rooms">Rooms: [Rooms]</p>
+        <p id="types-of-rooms">Room Types: [Types of Rooms]</p>
+        <p id="beds-baths">Beds & Baths: [Beds & Baths]</p>
+
+        <h3>Property Taxes & Assessment</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Tax</th>
+              <th>Assessment</th>
+            </tr>
+          </thead>
+          <tbody id="tax-assessment-data"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="../scripts/lightbox.js"></script>
   </body>
 </html>

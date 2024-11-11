@@ -6,26 +6,27 @@ body {
 
 header {
   background-color: #e2f4fe;
+  margin-bottom: 200px;
 }
 #navbar {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 4rem;
+  height: 6rem;
   align-items: center;
   background-color: white;
   padding-bottom: 3px;
 }
 
 #navbar > div > a {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: black;
   transition: transform 0.3s ease-in-out;
   text-align: center;
   font-family: "Work Sans";
-  font-weight: 500;
+  font-weight: 400;
 }
 
 #navbar > div > a:hover {
@@ -35,7 +36,7 @@ header {
 
 #navbar > #leftnav {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   justify-content: left;
   position: absolute;
   left: 40px;
@@ -43,47 +44,42 @@ header {
 
 #navbar > #rightnav {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   justify-content: right;
   position: absolute;
   right: 40px;
 }
 
 .head-card {
-  position: relative;
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
-.header-image {
-  left: 0px;
-
-  overflow: hidden;
+.head-image-container {
+  overflow: visible;
+  background-image: url("../images/robert-evans-contracting-window-installation1.png");
+  width: 40%;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-size: cover;
 }
 
 .header-large-overlay-text {
-  font-size: 3.7rem;
+  font-size: 6rem;
   font-weight: bold;
   text-align: center;
-  left: 50%;
   padding: 10px;
 }
 
 .header-slogan-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
-  margin: 30px;
-  margin-bottom: 100px;
-  width: 60vw;
+  margin: 130px 0 170px 80px;
+  width: 60%;
 }
 
 #get-started-btn {
-  left: 50%;
   background-color: black;
   color: white;
   text-decoration: none;
@@ -105,13 +101,12 @@ header {
 #get-started-btn > a {
   text-decoration: none;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }
 
 .header-medium-overlay-text {
   text-align: center;
-  left: 50%;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   color: rgb(90, 90, 90);
 }
 
@@ -122,13 +117,12 @@ header {
 
 .container {
   box-sizing: content-box;
-  /*   padding:0 50px; */
+
   width: 100%;
   height: 300px;
   margin: 0 auto;
   overflow: hidden;
   transition: 1s all;
-  /*   background:red; */
 }
 .carousel-container {
   width: calc(100% + 17px);
@@ -222,11 +216,6 @@ header {
   background: #eeeeee;
   box-shadow: 0 4px 31px -3px #00000082;
 }
-.image {
-  background: url(https://images.pexels.com/photos/1741205/pexels-photo-1741205.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
-    no-repeat center;
-  background-size: cover;
-}
 .holder {
   width: 60%;
   background: #262424;
@@ -244,20 +233,26 @@ header {
   margin-top: 30px;
 }
 
-.search-card {
-  box-shadow: 5px 5px 5px 5px black;
-  width: 90%;
-  max-width: 470px;
+#search-section {
+  box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.3);
+  width: fit-content;
   background: white;
   color: #fff;
-
-  margin: -80px auto 0;
+  transform: translate(-50%, -50%);
   border-radius: 2px;
-  margin-left: 200px;
-  padding: 40px 35px;
+  left: 50%;
+  padding: 30px 35px 35px 35px;
   text-align: center;
   position: absolute;
   z-index: 1 !important;
+  border-radius: 5px;
+}
+
+.search-card-text {
+  color: black;
+  text-align: left;
+  padding-bottom: 20px;
+  font-weight: 500;
 }
 
 .search {
@@ -270,26 +265,117 @@ header {
 .search input {
   border: 0;
   outline: 0;
-  background: #ebfffc;
-  color: #555;
-  padding: 10px 25px;
-  height: 60px;
-  border-radius: 2px;
-  flex: 1;
-  margin-right: 16px;
-  font-size: 18px;
 }
 
 .search button {
   border: 0;
   outline: 0;
-  background: #ebfffc;
-  border-radius: 50%;
+  background: #e2f4fe;
+  border-radius: 15px;
   width: 60px;
   height: 60px;
   cursor: pointer;
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.1);
 }
 
-.search button img {
-  width: 16px;
+.search {
+  button {
+    padding: 12px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  button:hover {
+    background-color: #bce6fd;
+  }
+}
+
+.icon-input {
+  display: flex;
+  flex-direction: row;
+  background: #e2f4fe;
+  color: #555;
+  padding: 5px;
+  height: 60px;
+  border-radius: 2px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.05);
+}
+
+.icon-input input {
+  padding-right: 20px;
+  background: #e2f4fe;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.icon-input input[type="text"] {
+  padding-left: 12px;
+  font-family: Inter;
+  font-size: 1rem;
+}
+
+.icon-input img {
+  padding-left: 5px;
+}
+
+.black-icon {
+  filter: brightness(0%);
+}
+
+#gallery-section {
+  margin-top: 30px;
+}
+
+.gallery-container {
+  width: 100%;
+  height: 200px;
+}
+
+.gallery-container .estate-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gallery-container .estate-container .property-card {
+  width: 100%;
+  height: 600px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.estate-container .property-card img {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  height: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (max-width: 1260px) {
+  .estate-container :nth-last-child(1) {
+    display: none;
+  }
+}
+
+@media (max-width: 1950px) {
+  .estate-container :nth-last-child(1) {
+    display: none;
+  }
+}
+
+main {
+  margin: 0 5%;
+}
+
+.gallery-title {
+  font-size: 2rem;
 }
