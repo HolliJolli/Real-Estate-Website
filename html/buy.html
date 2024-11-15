@@ -11,6 +11,8 @@
     />
   </head>
   <body>
+
+    
     <div id="image-gallery">
       <div id="gallery-thumbnails">
         <img src="../images/ph/placeholderH5.jpg" alt="Property Thumbnail" />
@@ -18,25 +20,25 @@
       <h3>Property Images</h3>
       <button id="view-all-images">View all images</button>
     </div>
-
+  <!-- <h2 id="slogan">Buy a house now</h2> -->
     <div class="property-container">
       <div id="property-info">
-        <h2 id="slogan">Buy a house now</h2>
+      
         <div id="address-info">
           <img
             class="icon"
             src="../images/icons/pin_drop_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
             alt="Location Icon"
           />
-          <h2 id="property-address">[Address]</h2>
+          <h2 id="property-address"> 106 Starren Dr</h2>
         </div>
-        <p id="property-description">[Description]</p>
+        <p id="property-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni veritatis sed! Magnam nemo illo in ratione quo fugiat maxime necessitatibus qui hic nostrum itaque perspiciatis cumque eum, sit cupiditate!</p>
       </div>
 
       <div id="brief-info">
         <p>Brief information</p>
-        <p id="developer-name">Owner: [Owner Name]</p>
-        <p id="property-price">Price: $[Price]</p>
+        <p id="developer-name">Owner: John Doe</p>
+        <p id="property-price">Price: $25000</p>
 
         <p id="property-beds-baths-sqft">
           <img
@@ -44,40 +46,50 @@
             src="../images/icons/bed_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
             alt=""
           />
-          [Beds] •
+          4 •
           <img
             class="icon"
             src="../images/icons/bathtub_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
             alt=""
-          />[Baths] •
+          />2 •
           <img
             class="icon"
             src="../images/icons/timeline_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
             alt=""
-          />[SqFt]
+          />2400 sqft
         </p>
 
         <button id="more-info" type="button">More information</button>
+        
+        <button id="calc-btn" type="button">Calculate</button>
       </div>
     </div>
 
     <h3>Similar Homes</h3>
     <div id="similar-homes-list"></div>
 
-    <h3>Affordability Calculator</h3>
-    <label for="home-price">Home Price:</label>
-    <input type="number" id="home-price" value="[Home Price]" />
+   
 
-    <label for="down-payment">Down Payment (%):</label>
-    <input type="number" id="down-payment" placeholder="20" />
+    <div id="calc-modal" class="modal">
+      <div class="modal-content">
+        <span class="closes-btn">&times;</span>
+        <h3>Affordability Calculator</h3>
+        <label for="home-price">Home Price:</label>
+        <input type="number" id="home-price" value="[Home Price]" />
+    
+        <label for="down-payment">Down Payment (%):</label>
+        <input type="number" id="down-payment" placeholder="20" />
+    
+        <label for="interest-rate">Interest Rate (%):</label>
+        <input type="number" id="interest-rate" placeholder="3.5" />
+    
+        <p id="estimated-payment">
+          Your estimated payment is $[Estimated Payment] per month.
+        </p>
+      </div>
+      </div>
 
-    <label for="interest-rate">Interest Rate (%):</label>
-    <input type="number" id="interest-rate" placeholder="3.5" />
-
-    <p id="estimated-payment">
-      Your estimated payment is $[Estimated Payment] per month.
-    </p>
-
+    </div>
     <div id="info-modal" class="modal">
       <div class="modal-content">
         <span class="close-btn">&times;</span>
