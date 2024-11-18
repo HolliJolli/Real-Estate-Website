@@ -13,14 +13,18 @@
   <body>
 
     
-    <div id="image-gallery">
-      <div id="gallery-thumbnails">
-        <img src="../images/ph/placeholderH5.jpg" alt="Property Thumbnail" />
+    <div id="gallery-container">
+      <div id="image-display">
+        <img id="current-image" src="" alt="Gallery Image">
       </div>
-      <h3>Property Images</h3>
-      <button id="view-all-images">View all images</button>
+      <div id="gallery-controls">
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+      </div>
     </div>
-  <!-- <h2 id="slogan">Buy a house now</h2> -->
+    <script src="script.js"></script>
+    
+
     <div class="property-container">
       <div id="property-info">
       
@@ -124,5 +128,6 @@
     </div>
 
     <script src="../scripts/lightbox.js"></script>
+    <script src="../scripts/loadData.js"></script>
   </body>
 </html>

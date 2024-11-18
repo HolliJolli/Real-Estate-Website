@@ -1,0 +1,101 @@
+{
+  "property": {
+    "address": "123 Main Street",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et architecto, in perferendis suscipit eum optio. Veniam, aliquid tenetur. Similique quisquam aliquam explicabo laudantium aut cum aperiam qui quae. Incidunt, optio.",
+    "developer": "John Doe",
+    "price": 450000,
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2500,
+    "gallery": [
+      {
+        "src": "https://picsum.photos/id/1028/300/300",
+        "alt": "a forest after an apocalypse"
+      },
+      {
+        "src": "https://picsum.photos/id/15/300/300",
+        "alt": "a waterfall and many rocks"
+      },
+      {
+        "src": "https://picsum.photos/id/1040/300/300",
+        "alt": "a house on a mountain"
+      },
+      {
+        "src": "https://picsum.photos/id/106/300/300",
+        "alt": "some pink flowers"
+      },
+      {
+        "src": "https://picsum.photos/id/136/300/300",
+        "alt": "big rocks with some trees"
+      },
+      {
+        "src": "https://picsum.photos/id/1039/300/300",
+        "alt": "a waterfall, a lot of trees and a great view from the sky"
+      },
+      {
+        "src": "https://picsum.photos/id/110/300/300",
+        "alt": "a cool landscape"
+      },
+      {
+        "src": "https://picsum.photos/id/1047/300/300",
+        "alt": "inside a town between two big buildings"
+      },
+      {
+        "src": "https://picsum.photos/id/1057/300/300",
+        "alt": "a great view of the sea above the mountain"
+      }
+    ],
+    "homeDetails": {
+      "basement": "Finished",
+      "rooms": [
+        "Living Room",
+        "Dining Room",
+        "Kitchen",
+        "Master Bedroom",
+        "Guest Bedroom"
+      ],
+      "bedsBaths": {
+        "full": 2,
+        "half": 1
+      }
+    },
+    "taxes": [
+      {
+        "year": 2022,
+        "tax": 1500,
+        "assessment": 20000
+      },
+      {
+        "year": 2023,
+        "tax": 1600,
+        "assessment": 21000
+      }
+    ],
+    "similar": [
+      {
+        "address": "120 Maple St",
+        "price": 22000,
+        "beds": 3,
+        "baths": 2,
+        "sqft": 1800,
+        "img": "../images/similar1.jpg"
+      },
+      {
+        "address": "45 Pine Rd",
+        "price": 27000,
+        "beds": 5,
+        "baths": 3,
+        "sqft": 2800,
+        "img": "../images/similar2.jpg"
+      },
+      {
+        "address": "89 Oak Ave",
+        "price": 30000,
+        "beds": 4,
+        "baths": 3,
+        "sqft": 2600,
+        "img": "../images/similar3.jpg"
+      }
+    ]
+  }
+}
