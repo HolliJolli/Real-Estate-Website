@@ -130,10 +130,6 @@ header {
   padding: 15px 17px 15px 0;
   overflow: auto;
   white-space: nowrap;
-  /*   background:red; */
-  /*   display:flex;   */
-  /*   align-items:center;  */
-  /*   flex-wrap:nowrap; */
 }
 
 .carousel-container::before {
@@ -172,15 +168,10 @@ header {
 }
 
 .outer {
-  /*   background:#tran; */
   position: relative;
   transform: translateY(50%);
 }
-/* .card:hover{
-  background:tomato;
-  transform:scale(1.1);
-  transform-origin:center;
-} */
+
 .card {
   position: relative;
 }

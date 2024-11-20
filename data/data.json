@@ -1,100 +1,88 @@
 {
   "property": {
-    "address": "123 Main Street",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et architecto, in perferendis suscipit eum optio. Veniam, aliquid tenetur. Similique quisquam aliquam explicabo laudantium aut cum aperiam qui quae. Incidunt, optio.",
-    "developer": "John Doe",
-    "price": 450000,
+    "address": "106 Starren Dr",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni veritatis sed! Magnam nemo illo in ratione quo fugiat maxime necessitatibus qui hic nostrum itaque perspiciatis cumque eum, sit cupiditate!",
+    "price": 25000,
     "beds": 4,
-    "baths": 3,
-    "sqft": 2500,
-    "gallery": [
-      {
-        "src": "https://picsum.photos/id/1028/300/300",
-        "alt": "a forest after an apocalypse"
-      },
-      {
-        "src": "https://picsum.photos/id/15/300/300",
-        "alt": "a waterfall and many rocks"
-      },
-      {
-        "src": "https://picsum.photos/id/1040/300/300",
-        "alt": "a house on a mountain"
-      },
-      {
-        "src": "https://picsum.photos/id/106/300/300",
-        "alt": "some pink flowers"
-      },
-      {
-        "src": "https://picsum.photos/id/136/300/300",
-        "alt": "big rocks with some trees"
-      },
-      {
-        "src": "https://picsum.photos/id/1039/300/300",
-        "alt": "a waterfall, a lot of trees and a great view from the sky"
-      },
-      {
-        "src": "https://picsum.photos/id/110/300/300",
-        "alt": "a cool landscape"
-      },
-      {
-        "src": "https://picsum.photos/id/1047/300/300",
-        "alt": "inside a town between two big buildings"
-      },
-      {
-        "src": "https://picsum.photos/id/1057/300/300",
-        "alt": "a great view of the sea above the mountain"
-      }
-    ],
-    "homeDetails": {
-      "basement": "Finished",
-      "rooms": [
-        "Living Room",
-        "Dining Room",
-        "Kitchen",
-        "Master Bedroom",
-        "Guest Bedroom"
-      ],
-      "bedsBaths": {
-        "full": 2,
-        "half": 1
-      }
+    "baths": 2,
+    "sqft": 2400,
+    "parking": "Yes",
+    "outdoor": "Large Backyard",
+    "ac": "Yes",
+    "hoa": 150,
+    "listingDate": "2024-11-01",
+    "pricePerSqFt": 10,
+    "basement": "Finished",
+    "rooms": 6,
+    "typesOfRooms": "Living Room, Kitchen, Bedrooms, Bathrooms",
+    "taxData": [
+      { "year": "2023", "tax": "$1,000", "assessment": "$250,000" },
+      { "year": "2022", "tax": "$950", "assessment": "$240,000" }
+    ]
+  },
+  "similarHomes": [
+    {
+      "address": "108 Starren Dr",
+      "price": 27000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2300,
+      "img": "../images/property2.jpg"
     },
-    "taxes": [
+    {
+      "address": "110 Starren Dr",
+      "price": 29000,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 3000,
+      "img": "../images/property3.jpg"
+    },
+    {
+      "address": "112 Starren Dr",
+      "price": 24000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2200,
+      "img": "../images/property4.jpg"
+    }
+  ],
+  "carouselImages": {
+    "propertyDataImages": [
       {
-        "year": 2022,
-        "tax": 1500,
-        "assessment": 20000
+        "img": "../images/ph/placeholderH1.jpg",
+        "alt": "Property Image 1"
       },
       {
-        "year": 2023,
-        "tax": 1600,
-        "assessment": 21000
+        "img": "../images/ph/placeholderH2.jpg",
+        "alt": "Property Image 2"
+      },
+
+      {
+        "img": "../images/ph/placeholderH3.jpg",
+        "alt": "Property Image 2"
+      },
+
+      {
+        "img": "../images/ph/placeholderH4.jpg",
+        "alt": "Property Image 2"
+      },
+      {
+        "img": "../images/ph/placeholderH5.jpg",
+        "alt": "Property Image 2"
       }
     ],
-    "similar": [
+    "similarHomesImages": [
       {
-        "address": "120 Maple St",
-        "price": 22000,
-        "beds": 3,
-        "baths": 2,
-        "sqft": 1800,
-        "img": "../images/similar1.jpg"
+        "img": "../images/property2.jpg",
+        "alt": "Image of Similar Home 1"
       },
       {
-        "address": "45 Pine Rd",
-        "price": 27000,
-        "beds": 5,
-        "baths": 3,
-        "sqft": 2800,
-        "img": "../images/similar2.jpg"
+        "img": "../images/property3.jpg",
+        "alt": "Image of Similar Home 2"
       },
       {
-        "address": "89 Oak Ave",
-        "price": 30000,
-        "beds": 4,
-        "baths": 3,
-        "sqft": 2600,
-        "img": "../images/similar3.jpg"
+        "img": "../images/property4.jpg",
+        "alt": "Image of Similar Home 3"
       }
     ]
   }

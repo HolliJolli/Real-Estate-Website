@@ -4,114 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Property Listing</title>
+    <link rel="stylesheet" href="../styles/carousel.css" />
     <link rel="stylesheet" href="../styles/buy.css" />
+    <link rel="stylesheet" href="../styles/modal.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-
-    
-    <div id="gallery-container">
-      <div id="image-display">
-        <img id="current-image" src="" alt="Gallery Image">
+    <section id="property-data-carousel">
+      <h3>Property Images</h3>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images/ph/placeholderH1.jpg" alt="Property Image 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="../images/ph/placeholderH2.jpg" alt="Property Image 2" />
+          </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
       </div>
-      <div id="gallery-controls">
-        <button id="prev-btn">Previous</button>
-        <button id="next-btn">Next</button>
-      </div>
-    </div>
-    <script src="script.js"></script>
-    
+    </section>
 
-    <div class="property-container">
+    <section class="property-container">
       <div id="property-info">
-      
         <div id="address-info">
           <img
             class="icon"
             src="../images/icons/pin_drop_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
             alt="Location Icon"
           />
-          <h2 id="property-address"> 106 Starren Dr</h2>
+          <h2 id="property-address">[Address]</h2>
         </div>
-        <p id="property-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magni veritatis sed! Magnam nemo illo in ratione quo fugiat maxime necessitatibus qui hic nostrum itaque perspiciatis cumque eum, sit cupiditate!</p>
+        <p id="property-description">[Property Description]</p>
       </div>
 
       <div id="brief-info">
-        <p>Brief information</p>
-        <p id="developer-name">Owner: John Doe</p>
-        <p id="property-price">Price: $25000</p>
-
+        <p id="developer-name">Holly Goodwill</p>
+        <p id="property-price">Price: $[Property Price]</p>
         <p id="property-beds-baths-sqft">
           <img
             class="icon"
             src="../images/icons/bed_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
             alt=""
           />
-          4 •
+          [Beds] •
           <img
             class="icon"
             src="../images/icons/bathtub_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
             alt=""
-          />2 •
+          />
+          [Baths] •
           <img
             class="icon"
             src="../images/icons/timeline_24dp_000_FILL0_wght400_GRAD0_opsz24.png"
             alt=""
-          />2400 sqft
+          />
+          [Sq Ft]
         </p>
-
-        <button id="more-info" type="button">More information</button>
-        
-        <button id="calc-btn" type="button">Calculate</button>
+        <button id="more-info" type="button">More Information</button>
+        <button id="calc-btn" type="button">Affordability Calculator</button>
       </div>
-    </div>
+    </section>
 
     <h3>Similar Homes</h3>
-    <div id="similar-homes-list"></div>
-
-   
+    <section id="similar-homes">
+      <div id="similar-homes-list"></div>
+    </section>
 
     <div id="calc-modal" class="modal">
       <div class="modal-content">
-        <span class="closes-btn">&times;</span>
+        <span class="close-btn">&times;</span>
         <h3>Affordability Calculator</h3>
         <label for="home-price">Home Price:</label>
-        <input type="number" id="home-price" value="[Home Price]" />
-    
+        <input type="number" id="home-price" value="[Price]" />
         <label for="down-payment">Down Payment (%):</label>
         <input type="number" id="down-payment" placeholder="20" />
-    
         <label for="interest-rate">Interest Rate (%):</label>
         <input type="number" id="interest-rate" placeholder="3.5" />
-    
         <p id="estimated-payment">
           Your estimated payment is $[Estimated Payment] per month.
         </p>
       </div>
-      </div>
-
     </div>
+
     <div id="info-modal" class="modal">
       <div class="modal-content">
         <span class="close-btn">&times;</span>
         <h3>Home Highlights</h3>
-        <ul>
-          <li id="highlight-parking">Parking: [Parking]</li>
-          <li id="highlight-outdoor">Outdoor: [Outdoor]</li>
-          <li id="highlight-ac">A/C: [A/C]</li>
-          <li id="highlight-hoa">HOA: $[HOA]</li>
-          <li id="highlight-listing-date">Listing Date: [Listing Date]</li>
-          <li id="highlight-price-per-sqft">Price per Sq Ft: $[Price/SqFt]</li>
-        </ul>
+        <div class="home-highlights">
+          <p id="highlight-parking">Parking: [Parking]</p>
+          <p id="highlight-outdoor">Outdoor: [Outdoor]</p>
+          <p id="highlight-ac">A/C: [A/C]</p>
+          <p id="highlight-hoa">HOA: $[HOA]</p>
+          <p id="highlight-listing-date">Listing Date: [Listing Date]</p>
+          <p id="highlight-price-per-sqft">Price per Sq Ft: $[Price/SqFt]</p>
+        </div>
 
         <h3>Home Details</h3>
-        <p id="basement">Basement: [Basement]</p>
-        <p id="rooms">Rooms: [Rooms]</p>
-        <p id="types-of-rooms">Room Types: [Types of Rooms]</p>
-        <p id="beds-baths">Beds & Baths: [Beds & Baths]</p>
+        <div class="home-details">
+          <p id="basement">Basement: [Basement]</p>
+          <p id="rooms">Rooms: [Rooms]</p>
+          <p id="types-of-rooms">Room Types: [Types of Rooms]</p>
+        </div>
 
         <h3>Property Taxes & Assessment</h3>
         <table>
@@ -127,7 +125,11 @@
       </div>
     </div>
 
-    <script src="../scripts/lightbox.js"></script>
+    <footer>
+      <p>&copy; 2024 Holly Goodwill & Isaac Trost</p>
+    </footer>
+
+    <script src="../scripts/modal.js"></script>
     <script src="../scripts/loadData.js"></script>
   </body>
 </html>
