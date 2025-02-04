@@ -10,15 +10,15 @@ function closeModal(modalId) {
 
 document.querySelectorAll(".close-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
-    closeModal("info-modal");
-    closeModal("calc-modal");
+    document.querySelectorAll(".modal").forEach((modal) => {
+      modal.style.display = "none";
+    });
   });
 });
 
 window.addEventListener("click", (event) => {
   if (event.target.classList.contains("modal")) {
-    closeModal("info-modal");
-    closeModal("calc-modal");
+    event.target.style.display = "none";
   }
 });
 

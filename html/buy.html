@@ -13,27 +13,25 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body style="overflow-x: hidden">
     <nav id="navbar">
       <div id="leftnav">
-        <a href="/index.html">Home</a>
-        <a href="/buy.html">Buy</a>
+        <a href="../index.html">Home</a>
+        <a href="buy.html">Buy</a>
         <a href="#">Advertise</a>
       </div>
       <div id="rightnav">
         <a href="#">Help</a>
-        <a href="#">Sign In</a>
+        <a href="#">Sign In</a>o
       </div>
     </nav>
     <section id="property-data-carousel">
       <div class="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../images/ph/placeholderH1.jpg" alt="Property Image 1" />
-          </div>
-          <div class="carousel-item">
-            <img src="../images/ph/placeholderH2.jpg" alt="Property Image 2" />
-          </div>
+          <!-- Carousel items will be dynamically loaded here -->
+        </div>
+        <div class="carousel-indicators">
+          <!-- Carousel indicators will be dynamically loaded here -->
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -54,7 +52,7 @@
       </div>
 
       <div id="brief-info">
-        <p id="developer-name">Holly Goodwill</p>
+        <p id="developer-name">Blandd</p>
         <p id="property-price">Price: $[Property Price]</p>
         <p id="property-beds-baths-sqft">
           <img
@@ -91,14 +89,12 @@
         <span class="close-btn">&times;</span>
         <h3>Affordability Calculator</h3>
         <label for="home-price">Home Price:</label>
-        <input type="number" id="home-price" value="[Price]" />
+        <input type="number" id="home-price" value="25000" />
         <label for="down-payment">Down Payment (%):</label>
         <input type="number" id="down-payment" placeholder="20" />
         <label for="interest-rate">Interest Rate (%):</label>
         <input type="number" id="interest-rate" placeholder="3.5" />
-        <p id="estimated-payment">
-          Your estimated payment is $[Estimated Payment] per month.
-        </p>
+        <p id="estimated-payment">Your estimated payment is $0.00 per month.</p>
       </div>
     </div>
 
@@ -137,10 +133,11 @@
     </div>
 
     <footer>
-      <p>&copy; 2024 Holly Goodwill & Isaac Trost</p>
+      <p>&copy; 2024 Sunnyside Inc</p>
     </footer>
 
-    <script src="../scripts/modal.js"></script>
-    <script src="../scripts/loadData.js"></script>
+    <script src="../scripts/modal.js" defer></script>
+    <script src="../scripts/loadData.js" defer></script>
+    <script src="../scripts/calc.js" defer></script>
   </body>
 </html>

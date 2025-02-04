@@ -45,6 +45,7 @@
   position: relative;
   width: 80%;
   max-width: 900px;
+  height: 500px; /* Set a fixed height for the carousel */
   margin: 30px auto;
   overflow: hidden;
   border-radius: 5px;
@@ -57,16 +58,19 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  height: 100%; /* Ensure the inner container takes the full height */
 }
 
 .carousel-item {
   min-width: 100%;
   display: none;
+  height: 100%; /* Ensure each item takes the full height */
 }
 
 .carousel-item img {
   width: 100%;
-  height: auto;
+  height: 100%; /* Ensure images take the full height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease;
@@ -131,6 +135,8 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .carousel-indicators button {
@@ -151,6 +157,20 @@
 .carousel-indicators .active {
   background-color: #fff;
   transform: scale(1.5);
+}
+
+.carousel-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: #333;
 }
 
 @media (max-width: 1024px) {

@@ -4,6 +4,7 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #e2f4fe;
   color: #000;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #navbar {
@@ -18,12 +19,11 @@ body {
 
 #navbar > div > a {
   font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: black;
   transition: transform 0.3s ease-in-out;
   text-align: center;
-  font-family: "Work Sans";
+  font-family: "Work Sans", sans-serif;
   font-weight: 400;
 }
 
@@ -32,21 +32,21 @@ body {
   filter: brightness(1.2);
 }
 
-#navbar > #leftnav {
+#navbar > #leftnav,
+#navbar > #rightnav {
   display: flex;
   gap: 50px;
-  justify-content: left;
   position: absolute;
+}
+
+#navbar > #leftnav {
   left: 40px;
 }
 
 #navbar > #rightnav {
-  display: flex;
-  gap: 50px;
-  justify-content: right;
-  position: absolute;
   right: 40px;
 }
+
 #more-info,
 #calc-btn {
   width: 100%;
@@ -71,6 +71,7 @@ body {
 
 .property-container {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   margin-bottom: 2em;
   padding: 0 1em;
@@ -79,7 +80,6 @@ body {
 #property-info {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   transition: ease-in-out 0.3s;
-  flex: 2;
   padding: 1em;
   background-color: #fff;
   border-radius: 10px;
@@ -99,7 +99,6 @@ body {
 
 #property-address {
   font-size: 1.5em;
-  font-weight: 500;
   font-weight: bold;
 }
 
@@ -117,7 +116,6 @@ body {
 #brief-info {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   transition: ease-in-out 0.3s;
-  flex: 1.3;
   padding: 1em;
   background-color: #fff;
   border-radius: 10px;
@@ -133,8 +131,8 @@ body {
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   vertical-align: middle;
 }
 
@@ -181,32 +179,21 @@ footer p {
   margin-bottom: 0.5em;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .property-container {
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  #property-info,
+  #property-info {
+    flex: 2;
+  }
+
   #brief-info {
-    flex: 1 1 100%;
-  }
-
-  #more-info,
-  #calc-btn {
-    width: 100%;
+    flex: 1.3;
   }
 }
 
 @media (max-width: 768px) {
-  .property-container {
-    flex-direction: column;
-  }
-
-  #property-info,
-  #brief-info {
-    flex: 1 1 100%;
-  }
-
   footer p {
     font-size: 1.2em;
   }
